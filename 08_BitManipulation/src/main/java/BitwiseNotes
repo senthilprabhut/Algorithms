@@ -1,0 +1,65 @@
+https://stackoverflow.com/questions/6398427/what-does-bitwise-xor-exclusive-or-mean
+What does bitwise XOR (exclusive OR) mean?
+
+XOR (eXclusive OR/either or), can be translated simply as toggle on/off.
+Which will either exclude or include the specified bits.
+
+Using 4 bits (1111) we get 16 possible results from 0-15:
+
+ 0: 0000
+ 1: 0001
+ 2: 0010
+ 3: 0011 (1+2)
+ 4: 0100
+ 5: 0101 (1+4)
+ 6: 0110 (2+4)
+ 7: 0111 (1+2+4)
+ 8: 1000
+ 9: 1001 (1+8)
+10: 1010 (2+8)
+11: 1011 (1+2+8)
+12: 1100 (4+8)
+13: 1101 (1+4+8)
+14: 1110 (2+4+8)
+15: 1111 (1+2+4+8)
+
+
+As for what's going on with the logic behind XOR here are some examples
+1^3 = 2
+    Logic: (1^(1+2))
+    1 is a member of 1+2 (3) remove 1 = 2
+
+4^5 = 1
+    Logic: (4^(1+4))
+    4 is a member of 1+4 (5) remove 4 = 1
+
+4^4 = 0
+    4 is a member of itself remove 4 = 0
+
+1^2^3 = 0
+    Logic: ((1^2)^(1+2))
+    (1^2) 1 is not a member of 2 add 2 = 1+2 (3)
+    (3^3) 1 and 2 are members of 1+2 (3) remove 1+2 (3) = 0
+
+1^1^0^1 = 1
+    Logic: (((1^1)^0)^1)
+    (1^1) 1 is a member of 1 remove 1 = 0
+    (0^0) 0 is a member of 0 remove 0 = 0
+    (0^1) 0 is not a member of 1 add 1 = 1
+
+1^8^4 = 13
+    Logic: ((1^8)^4)
+    (1^8) 1 is not a member of 8 add 1 = 1+8 (9)
+    (9^4) 1 and 8 are not members of 4 add 1+8 = 1+4+8 (13)
+
+4^13^10 = 3
+    Logic: ((4^(1+4+8))^(2+8))
+    (4^13) 4 is a member of 1+4+8 (13) remove 4 = 1+8 (9)
+    (9^10) 8 is a member of 2+8 (10) remove 8 = 2
+    1 is not a member of 2+8 (10) add 1 = 1+2 (3)
+
+4^10^13 = 3
+    Logic: ((4^(2+8))^(1+4+8))
+    (4^10) 4 is not a member of 2+8 (10) add 4 = 2+4+8 (14)
+    (14^13) 4 and 8 are members of 1+4+8 (13) remove 4+8 = 1
+    2 is not a member of 1+4+8 (13) add 2 = 1+2 (3)
