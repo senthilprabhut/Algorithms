@@ -3,7 +3,7 @@
  */
 
 allprojects {
-    group = 'com.learning.dsa'
+    group = 'com.learning.algorithms'
     version = '1.0-SNAPSHOT'
 }
 
@@ -14,11 +14,11 @@ subprojects {
     repositories {
         mavenLocal()
         maven {
-            url = 'http://repo.maven.apache.org/maven2'
+            url = 'https://repo.maven.apache.org/maven2'
         }
     }
 
-    sourceCompatibility = '1.8'
+    sourceCompatibility = '1.11'
 
     publishing {
         publications {

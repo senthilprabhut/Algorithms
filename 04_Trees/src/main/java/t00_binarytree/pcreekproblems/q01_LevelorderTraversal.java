@@ -1,7 +1,7 @@
 package t00_binarytree.pcreekproblems;
 
-import t00_binarytree.BinaryTree;
-import t01_bst.TreeNode;
+import datastructure.BinaryTree;
+import datastructure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

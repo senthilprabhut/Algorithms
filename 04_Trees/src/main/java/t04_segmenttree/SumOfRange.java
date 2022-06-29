@@ -1,5 +1,7 @@
 package t04_segmenttree;
 
+import datastructure.SegmentTree;
+
 /**
  * Problem:
  *  We have an array arr[0 . . . n-1]. We should be able to efficiently find the sum of elements from

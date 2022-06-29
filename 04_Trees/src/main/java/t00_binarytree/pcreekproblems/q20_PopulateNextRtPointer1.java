@@ -1,6 +1,6 @@
 package t00_binarytree.pcreekproblems;
 
-import utils.TreeNodeInterface;
+import datastructure.TreeNodeInterface;
 import utils.TreeUtils;
 
 import java.util.LinkedList;

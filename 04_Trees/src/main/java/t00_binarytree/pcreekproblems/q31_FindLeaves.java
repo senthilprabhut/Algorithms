@@ -7,8 +7,8 @@ package t00_binarytree.pcreekproblems;
 import java.util.ArrayList;
 import java.util.List;
 
-import t00_binarytree.BinaryTree;
-import t01_bst.TreeNode;
+import datastructure.BinaryTree;
+import datastructure.TreeNode;
 import utils.TreeUtils;
 
 /**

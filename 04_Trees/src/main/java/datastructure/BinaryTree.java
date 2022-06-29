@@ -1,6 +1,5 @@
-package t00_binarytree;
+package datastructure;
 
-import t01_bst.TreeNode;
 import utils.TreeUtils;
 
 public class BinaryTree<T> {

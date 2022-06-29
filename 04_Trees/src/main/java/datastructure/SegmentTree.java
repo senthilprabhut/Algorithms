@@ -1,4 +1,4 @@
-package t04_segmenttree;
+package datastructure;
 
 import bits.NextPowerOf2;
 
@@ -138,13 +138,13 @@ public class SegmentTree {
         printTree(segmentTree, 2*segTreeIndex+1, false, indent + (isRight ? " |      " : "        "));
     }
 
-    static interface Operation {
+    public static interface Operation {
         public int perform(int a, int b);
 
         public int getLazyMultiplier(int startIndex, int endIndex);
     }
 
-    static class AddOperation implements Operation {
+    public static class AddOperation implements Operation {
         @Override
         public int perform(int a, int b) {
             return a + b;
@@ -156,7 +156,7 @@ public class SegmentTree {
         }
     }
 
-    static class MinOperation implements Operation {
+    public static class MinOperation implements Operation {
         @Override
         public int perform(int a, int b) {
             return Math.min(a, b);

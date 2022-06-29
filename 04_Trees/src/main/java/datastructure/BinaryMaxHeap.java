@@ -1,4 +1,4 @@
-package t02_heap;
+package datastructure;
 
 import java.util.Arrays;
 

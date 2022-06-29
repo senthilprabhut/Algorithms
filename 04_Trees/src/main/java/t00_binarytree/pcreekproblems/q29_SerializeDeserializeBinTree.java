@@ -4,8 +4,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
 
-import t00_binarytree.BinaryTree;
-import t01_bst.TreeNode;
+import datastructure.BinaryTree;
+import datastructure.TreeNode;
 import utils.TreeUtils;
 
 /**

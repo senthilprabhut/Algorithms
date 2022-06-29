@@ -1,6 +1,4 @@
-package t01_bst;
-
-import utils.TreeNodeInterface;
+package datastructure;
 
 public class TreeNode<T> implements TreeNodeInterface<T>{
     public T data;

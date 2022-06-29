@@ -1,4 +1,4 @@
-package t01_bst;
+package datastructure;
 
 /**
  * AVL TREE

@@ -1,4 +1,4 @@
-package utils;
+package datastructure;
 
 public interface TreeNodeInterface<T> {
     T data();

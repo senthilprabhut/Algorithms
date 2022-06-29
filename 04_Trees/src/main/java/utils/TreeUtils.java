@@ -1,5 +1,7 @@
 package utils;
 
+import datastructure.TreeNodeInterface;
+
 public class TreeUtils {
     public static void printTree(TreeNodeInterface root) {
         if (root == null) {

@@ -7,19 +7,36 @@ import java.util.Map;
  * Difficulty Level: EASY
  *
  * Problem:
+ *  Given two strings s and t, return true if t is an anagram of s, and false otherwise.
+ *
  *  Given two strings s and t, write a function to determine if t is an anagram of s.
- *  For example, s = "anagram", t = "nagaram", return true.
- *  s = "rat", t = "car", return false.
- *  Note: You may assume the string contains only lowercase alphabets.
- *  Follow up:  What if the inputs contain unicode characters? How would you adapt your solution to such case?
+ *  <b> Example 1:</b>
+ *  <code>
+ *      Input: s = "anagram", t = "nagaram"
+ *      Output: true
+ *  </code>
+ *  <b>Example 2:</b>
+ *  <code>
+ *      Input: s = "rat", t = "car"
+ *      Output: false
+ *  </code>
+ *
+ *
+ * Constraints:
+ *  <ul>
+ *      <li>1 <= s.length, t.length <= 5 * 104</li>
+ *      <li>s and t consist of lowercase English letters.</li>
+ *  </ul>
+ *
+ * Follow up:  What if the inputs contain unicode characters? How would you adapt your solution to such case?
  *
  * Links:
  *  https://leetcode.com/problems/valid-anagram/description/
  *  https://www.programcreek.com/2014/05/leetcode-valid-anagram-java/
  */
-public class q58_ValidAnagram {
+public class L242_q58_ValidAnagram {
     public static void main(String[] args) {
-        q58_ValidAnagram va = new q58_ValidAnagram();
+        L242_q58_ValidAnagram va = new L242_q58_ValidAnagram();
         System.out.println(va.isAnagram1("anagram", "nagaram"));
         System.out.println(va.isAnagram3("anagram", "nagaram"));
         System.out.println(va.isAnagram1("car", "rat"));
